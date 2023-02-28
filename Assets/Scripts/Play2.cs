@@ -33,7 +33,7 @@ public class Play2 : MonoBehaviour
             vid2.Play();
             vid2Status = true;
         }else if(infrared2Status1 == 0 || infrared2Status3 == 0){
-            vid2.Pause();
+            vid2.enabled = false;
             vid2Status = false;
         }
 

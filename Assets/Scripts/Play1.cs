@@ -39,7 +39,7 @@ public class Play1 : MonoBehaviour
             vid1.Play();
             vid1Status = true;
         }else if(infrared1Status2 == 0 || infrared1Status3 == 0){
-            vid1.Pause();
+            vid1.enabled = false;
             vid1Status = false;
         }
 
