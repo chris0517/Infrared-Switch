@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class Text : MonoBehaviour
+public class txt : MonoBehaviour
 {
+
     public GameObject tmpValue;
     public string val;
     TextMeshProUGUI textValue;
 
     public bool script1;
-    // public bool script2;
-    // public bool script3;
-
+    private int counter;
+    // Start is called before the first frame update
     void Start()
     {
-        val = "Please Pick Up The Sankofa To Start";
         textValue = tmpValue.GetComponent<TextMeshProUGUI>();
+
     }
 
-
-
+    // Update is called once per frame
     void Update()
     {
         textValue.text = val;
@@ -38,11 +37,17 @@ public class Text : MonoBehaviour
         //     val = "Playing Video 3";
         // }
         if(script1){
+            counter++;
+        }
+
+        if(!script1 && counter > 0){
+            val = "paulsed";
+        }else{
             val = "";
         }
 
         if(Input.GetKeyDown(KeyCode.T)){
             val = "No Video Playing";
-        }
+        }  
     }
 }

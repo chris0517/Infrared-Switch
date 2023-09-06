@@ -26,8 +26,8 @@ public class Play2 : MonoBehaviour
     {
         vid2.enabled = true;
         infrared2Status1 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleA;
-        infrared2Status2 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleB;
-        infrared2Status3 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleC;
+        // infrared2Status2 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleB;
+        // infrared2Status3 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleC;
 
         if(infrared2Status2 == 0){
             vid2.Play();

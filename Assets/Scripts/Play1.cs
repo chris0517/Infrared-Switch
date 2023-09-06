@@ -11,8 +11,9 @@ public class Play1 : MonoBehaviour
     private VideoPlayer vid1;
 
     public int infrared1Status1;
-    public int infrared1Status2;
-    public int infrared1Status3;
+    // public int infrared1Status2;
+    // public int infrared1Status3;
+    private int counter = 0;
 
 
     void Start()
@@ -30,18 +31,31 @@ public class Play1 : MonoBehaviour
     {
         vid1.enabled = true;
         infrared1Status1 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleA;
-        infrared1Status2 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleB;
-        infrared1Status3 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleC;
+        // infrared1Status2 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleB;
+        // infrared1Status3 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleC;
 
         // Find a way to set status to false when vid is finished
 
-        if(infrared1Status1 == 0){
+        if(infrared1Status1 == 1 && !vid1Status){
             vid1.Play();
             vid1Status = true;
-        }else if(infrared1Status2 == 0 || infrared1Status3 == 0){
-            vid1.enabled = false;
+            print("playing");
+            
+        }else if(infrared1Status1 == 0 && vid1Status ){
+            vid1.Pause();
             vid1Status = false;
+            print("paused");
         }
+
+        // else if(infrared1Status1 == 0 && x > 0 && vid1Status == true){
+        //     vid1.Pause();
+        //     vid1Status = false;
+        //     print("paused");
+        // }
+        // else if(infrared1Status2 == 0 || infrared1Status3 == 0){
+        //     vid1.enabled = false;
+        //     vid1Status = false;
+        // }
 
 
 

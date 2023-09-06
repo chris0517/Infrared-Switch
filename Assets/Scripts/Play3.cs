@@ -28,8 +28,8 @@ public class Play3 : MonoBehaviour
     {
         vid3.enabled = true;
         infrared3Status1 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleA;
-        infrared3Status2 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleB;
-        infrared3Status3 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleC;
+        // infrared3Status2 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleB;
+        // infrared3Status3 = GameObject.FindGameObjectWithTag("data").GetComponent<abc>().obstacleC;
 
         if(infrared3Status3 == 0){
             vid3.Play();
